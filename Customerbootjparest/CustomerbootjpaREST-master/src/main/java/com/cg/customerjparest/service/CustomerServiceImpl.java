@@ -1,4 +1,4 @@
-package com.cg.customerjpa.service;
+package com.cg.customerjparest.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cg.customerjpa.dao.*;
-import com.cg.customerjpa.entities.Customer;
-import com.cg.customerjpa.util.ValidationUtil;
+import com.cg.customerjparest.dao.*;
+import com.cg.customerjparest.entities.Customer;
+import com.cg.customerjparest.util.ValidationUtil;
 
 import javax.persistence.EntityManager;
 
@@ -39,6 +39,12 @@ public class CustomerServiceImpl implements ICustomerService {
 	}
 
 
+	@Override
+	public Customer findById(long id) {
+		Customer customer = dao.findById(id);
+        return customer;
+	}
+
+
 
 }
-
