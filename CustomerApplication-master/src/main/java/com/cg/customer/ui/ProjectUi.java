@@ -13,13 +13,13 @@ public class ProjectUi {
 	private ICustomerService service ;
 
 	public void runUi() {
-		Customer customer = add("Naresh");
+		Customer customer = add("Bhuratna");
 		long id1 = customer.getId();
-		Customer customer2 = add("Suresh");
+		Customer customer2 = add("Mishra");
 		long id2 = customer2.getId();
-		Customer customer3 = add("Harish");
+		Customer customer3 = add("Rahul");
 		long id3 = customer3.getId();
-		customer2=updateName(id2, "Ramesh");
+		customer2=updateName(id2, "Mishra");
 		//System.out.println(customer2.getName());
 	}
 
